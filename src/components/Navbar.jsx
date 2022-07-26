@@ -27,8 +27,8 @@ export default function Navbar() {
   }
 
   return (
-    <section className="wrap bg-wine-300 p-4">
-      <nav className="flex justify-between xl:container xl:mx-auto">
+    <section className="wrap bg-wine-300">
+      <nav className="flex justify-between my-container">
         <Link to="/" >
           <h1 className="hidden">眼鏡形象官網</h1>
           <img className="w-20" src="logo-white.png" alt="LOGO" />
@@ -51,8 +51,8 @@ export default function Navbar() {
         </ul>
 
         {/* 手機漢堡選單 */}
-        <button>
-          <Icon className="md:hidden"
+        <button className="md:hidden">
+          <Icon
             path={mdiMenu}
             title="Menu"
             size={2}

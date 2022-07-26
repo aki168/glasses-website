@@ -22,13 +22,16 @@ module.exports = {
         'kaki':'#B75929',
       },
 
-      // 設定背景路徑
-      // backgroundImage: {
-      //   'hero': "url('/home-header.png')",
-      //   'hero-sm': "url('/home-header-sm.png')",
-      // }
-
     },
+      //設定背景路徑
+      backgroundImage: {
+        'hero': "url('./img/home-header.png')",
+        'hero-sm': "url('./img/home-header-sm.png')",
+        'index': "url('./img/index-bg.png')",
+        'index-md': "url('./img/index-bg-md.png')",
+        'index-sm': "url('./img/index-bg-sm.png')",
+      }
+
   },
   plugins: [],
 }

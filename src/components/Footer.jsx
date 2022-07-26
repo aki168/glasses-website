@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="wrap bg-wine-300 text-white py-4 px-3 md:px-2">
       <section class="flex md:block justify-between">
-        <nav className="justify-between xl:container xl:mx-auto mb-9
+        <nav className="justify-between my-container mb-9
                         hidden md:flex">
           <ul className="items-center text-white leading-normal flex">
             <li>
@@ -34,7 +34,7 @@ export default function Footer() {
         </nav>
 
 
-        <ul className="contact pb-6 md:pb-8 xl:container xl:mx-auto">
+        <ul className="contact pb-6 md:pb-8 my-container">
           <li className="align-middle mb-2">
               <Icon
                 className="md:w-9 w-5 md:mr-5 mr-3 inline-block"
@@ -67,7 +67,7 @@ export default function Footer() {
       </section>
 
       <h5 className="md:flex justify-between py-8 leading-normal border-t border-white
-                      xl:container xl:mx-auto">
+                      my-container">
         <span className="pb-2">
           Copyright © 2020 Glasses.All rights reserved.
         </span>
