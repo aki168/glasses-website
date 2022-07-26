@@ -71,7 +71,7 @@ export default function Footer() {
         <span className="pb-2">
           Copyright © 2020 Glasses.All rights reserved.
         </span>
-        <ul className="md:flex">
+        <ul className="md:flex" onClick={(e)=>{e.preventDefault()}}>
           <li className="py-2 md:py-0 md:px-2"><a href="/">隱私權政策</a></li>
           <li ><a href="/">服務條款</a></li>
         </ul>

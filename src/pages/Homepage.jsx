@@ -14,16 +14,15 @@ export default function Homepage() {
     <>
       <Navbar />
       <header className="bg-hero-sm md:bg-hero  py-[300px] bg-cover bg-center
-                      text-wine-600 leading-normal 
-                        text-end">
+                      text-wine-600 leading-normal text-end">
         <section className="my-container">
           <h3 className="text-[36px]">Promise-Desert 2020 早春系列</h3>
           <h2 className="text-[64px] font-bold">看得清，才能看得遠</h2>
           <button className="bg-wine-300 text-white text-[20px] py-[6px] px-2 font-medium">立即購買</button>
         </section>
       </header>
-      {/*  */}
 
+      {/* 品牌聲明 */}
       <main className="py-20 leading-normal bg-wine-100">
         <h2 className="my-title mb-8">用專業的心，做專業的事</h2>
         <ul className="flex flex-wrap justify-center md:justify-between 
@@ -51,12 +50,13 @@ export default function Homepage() {
           />
         </ul>
       </main>
-      {/*  */}
 
+      {/* 經典系列 */}
       <section className="py-20 px-4 leading-normal">
         <h2 className="my-title mb-12">經典系列鏡框</h2>
-        <ul className="flex flex-wrap flex-col
-                      md:justify-center md:flex-row gap-6">
+        <ul className="flex flex-wrap flex-col 
+                      md:justify-center md:flex-row gap-6"
+                      onClick={(e)=>{e.preventDefault()}}>
           <GlassesCard
             img="home-section3-1.png"
             title="OPTICAL"
@@ -71,11 +71,12 @@ export default function Homepage() {
           />
         </ul>
       </section>
-      {/*  */}
+
+      {/* 聯名系列 */}
       <section className="py-20 px-4 leading-normal
                 bg-index-sm md:bg-index-md lg:bg-index bg-cover bg-center">
-        <h2 className="my-title mb-12 text-white">經典系列鏡框</h2>
-        <ul className="flex justify-center flex-wrap">
+        <h2 className="my-title mb-12 text-white">聯名系列鏡框</h2>
+        <ul className="flex justify-center flex-wrap" onClick={(e)=>{e.preventDefault()}}>
           <DesignCard
             className="border-r border-stone-400"
             title="DOUBLE A+"
@@ -88,7 +89,7 @@ export default function Homepage() {
         </ul>
       </section>
 
-      {/*  */}
+      {/* 顧客推薦 */}
       <section className="py-20 px-4 leading-normal">
         <h2 className="my-title mb-12">顧客推薦</h2>
         <ul className="flex justify-between flex-wrap">
@@ -119,10 +120,10 @@ export default function Homepage() {
             text="服務很好，品質沒有任何問題，非常喜歡。"
             date="2020/10/31"
           />
-
         </ul>
-
       </section>
+
+      {/* 聯絡我們：待製作 */}
 
       <Footer />
 
