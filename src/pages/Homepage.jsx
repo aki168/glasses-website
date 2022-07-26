@@ -56,7 +56,7 @@ export default function Homepage() {
       <main className="py-20 leading-normal bg-wine-100">
         <h2 className="my-title mb-8">用專業的心，做專業的事</h2>
         <ul className="flex flex-wrap justify-center md:justify-between 
-                        px-9 my-container md:pb-10 lg:pb-16">
+                        px-9 my-container md:pb-10 lg:pb-0">
           {IconCards}
         </ul>
       </main>
