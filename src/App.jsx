@@ -1,4 +1,3 @@
-import './App.css';
 import Homepage from './pages/Homepage'
 import Products from './pages/Products'
 import Stores from './pages/Stores'
@@ -10,7 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={Homepage}></Route>
+      {/* <Route path="/" element={<Homepage />} /> */}
+        <Route path='/' element={<Homepage/>}></Route>
         <Route path='/products' element={Products}></Route>
         <Route path='/stores' element={Stores}></Route>
         <Route path='/blog' element={Blog}></Route>
