@@ -1,12 +1,22 @@
 import './App.css';
+import Homepage from './pages/Homepage'
+import Products from './pages/Products'
+import Stores from './pages/Stores'
+import Blog from './pages/Blog'
+import Faq from './pages/Faq'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h2 className="text-3xl font-bold underline bg-sky-500 text-green-100">
-        Hello world!
-      </h2>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={Homepage}></Route>
+        <Route path='/products' element={Products}></Route>
+        <Route path='/stores' element={Stores}></Route>
+        <Route path='/blog' element={Blog}></Route>
+        <Route path='/FAQ' element={Faq}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
