@@ -27,9 +27,9 @@ export default function Footer() {
             </li>
           </ul>
           <ul className="flex">
-            <li><a href="/"><img className="w-6 md:w-11" src="./glasses-website/ic_social_ig.png" alt="IG" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8" src="./glasses-website/ic-social-fb.png" alt="FB" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8" src="./glasses-website/ic_social_line.png" alt="LINE" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11" src="./ic_social_ig.png" alt="IG" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 ml-8" src="./ic-social-fb.png" alt="FB" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 ml-8" src="./ic_social_line.png" alt="LINE" /></a></li>
           </ul>
         </nav>
 
