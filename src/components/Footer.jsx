@@ -3,6 +3,7 @@ import Icon from '@mdi/react'
 import { mdiPhoneOutline, mdiEmailOutline } from '@mdi/js';
 
 export default function Footer() {
+  const path = 'https://raw.githubusercontent.com/aki168/glasses-website/main/public';
 
   return (
     <footer className="wrap bg-wine-300 text-white py-4 px-3 md:px-2">
@@ -27,9 +28,9 @@ export default function Footer() {
             </li>
           </ul>
           <ul className="flex">
-            <li><a href="/"><img className="w-6 md:w-11" src="./ic_social_ig.png" alt="IG" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8" src="./ic-social-fb.png" alt="FB" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8" src="./ic_social_line.png" alt="LINE" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11" src={`${path}/ic_social_ig.png`}  alt="IG" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 ml-8" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 ml-8" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
           </ul>
         </nav>
 
@@ -60,9 +61,9 @@ export default function Footer() {
         </ul>
 
         <ul className="flex md:hidden">
-            <li><a href="/"><img className="w-11" src="ic_social_ig.png" alt="IG" /></a></li>
-            <li><a href="/"><img className="w-11 ml-1" src="ic-social-fb.png" alt="FB" /></a></li>
-            <li><a href="/"><img className="w-11 ml-1" src="ic_social_line.png" alt="LINE" /></a></li>
+            <li><a href="/"><img className="w-11" src={`${path}/ic_social_ig.png`} alt="IG" /></a></li>
+            <li><a href="/"><img className="w-11 ml-1" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
+            <li><a href="/"><img className="w-11 ml-1" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
         </ul>
       </section>
 

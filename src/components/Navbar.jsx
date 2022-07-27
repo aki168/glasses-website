@@ -20,18 +20,21 @@ import { useState } from "react";
 
 export default function Navbar() {
 
+ 
   const [menu, setMenu] = useState(false)
 
   const showMenu = () => {
       setMenu(prevSetMenu => !prevSetMenu)
   }
 
+  const path = 'https://raw.githubusercontent.com/aki168/glasses-website/main/public';
+
   return (
     <section className="wrap bg-wine-300">
       <nav className="flex justify-between my-container">
         <Link to="/" >
           <h1 className="hidden">眼鏡形象官網</h1>
-          <img className="w-20" src="logo-white.png" alt="LOGO" />
+          <img className="w-20" src={path+'/logo-white.png'} alt="LOGO" />
         </Link>
 
         {/* 平板 PC 選單 */}
