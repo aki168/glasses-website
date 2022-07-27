@@ -12,6 +12,11 @@
     @apply text-wine-600 font-bold text-center
     text-[24px] md:text-[48px] lg:text-5xl
   }
+
+  .roboto{
+    font-family:'Roboto', sans-serif;
+  }
+  
 }
 
 body {
@@ -22,5 +27,5 @@ body {
 }
 
 a:hover, svg:hover, button:hover{
-  opacity: 0.7;
+  opacity: 0.9;
 }

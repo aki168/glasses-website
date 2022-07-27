@@ -12,7 +12,7 @@ export default function Footer() {
                         hidden md:flex">
           <ul className="items-center text-white leading-normal flex">
             <li>
-              <Link to="/" className="pr-6 mb-12">首頁</Link>
+              <Link to="/glasses-website" className="pr-6 mb-12">首頁</Link>
             </li>
             <li>
               <Link to="/products" className="px-6">系列鏡框</Link>

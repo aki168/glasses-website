@@ -10,10 +10,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/glasses-website' element={<Homepage/>}></Route>
-        <Route path='/products' element={Products}></Route>
-        <Route path='/stores' element={Stores}></Route>
-        <Route path='/blog' element={Blog}></Route>
-        <Route path='/FAQ' element={Faq}></Route>
+        <Route path='/products' element={<Products/>}></Route>
+        <Route path='/stores' element={<Stores/>}></Route>
+        <Route path='/blog' element={<Blog/>}></Route>
+        <Route path='/FAQ' element={<Faq/>}></Route>
       </Routes>
     </BrowserRouter>
   );

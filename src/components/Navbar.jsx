@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <section className="wrap bg-wine-300">
       <nav className="flex justify-between my-container">
-        <Link to="/" >
+        <Link to="/glasses-website" >
           <h1 className="hidden">眼鏡形象官網</h1>
           <img className="w-20" src={path+'/logo-white.png'} alt="LOGO" />
         </Link>

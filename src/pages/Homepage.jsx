@@ -89,7 +89,7 @@ export default function Homepage() {
       </section>
 
       {/* 顧客推薦 */}
-      <section className="py-20 px-4 leading-normal">
+      <section className="py-20 px-4 leading-normal my-container">
         <h2 className="my-title mb-12">顧客推薦</h2>
         <ul className="flex justify-between flex-wrap">
           {CustomerCards}
