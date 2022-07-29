@@ -3,6 +3,7 @@ import Products from './pages/Products'
 import Stores from './pages/Stores'
 import Blog from './pages/Blog'
 import Faq from './pages/Faq'
+import StoreOwn from './pages/StoreOwn'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
         <Route path='/glasses-website' element={<Homepage/>}></Route>
         <Route path='/products' element={<Products/>}></Route>
         <Route path='/stores' element={<Stores/>}></Route>
+        <Route path='/stores/details' element={<StoreOwn/>}></Route>
+        <Route path='/storesOwn' element={<StoreOwn/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/FAQ' element={<Faq/>}></Route>
       </Routes>

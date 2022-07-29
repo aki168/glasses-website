@@ -1,4 +1,5 @@
-// 引用美化過的元件
+import {nanoid} from "nanoid";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import IconCard from "../components/IconCard";
@@ -16,7 +17,7 @@ export default function Homepage() {
   const IconCards = IconCardData.map(item => {
     return (
       <IconCard
-        key={item.id}
+        key={nanoid()}
         {...item}
       />
     )
@@ -25,7 +26,7 @@ export default function Homepage() {
   const GlassesCards = GlassesCardData.map(item => {
     return (
       <GlassesCard
-        key={item.id}
+        key={nanoid()}
         {...item}
       />
     )
@@ -34,7 +35,7 @@ export default function Homepage() {
   const CustomerCards = CustomerCardData.map(item => {
     return (
       <CustomerCard
-        key={item.id}
+        key={nanoid()}
         {...item}
       />
     )

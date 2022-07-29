@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="wrap bg-wine-300 text-white py-4 px-3 md:px-2">
-      <section class="flex md:block justify-between">
+      <section className="flex md:block justify-between">
         <nav className="justify-between my-container mb-9
                         hidden md:flex">
           <ul className="items-center text-white leading-normal flex">

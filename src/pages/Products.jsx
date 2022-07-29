@@ -1,4 +1,6 @@
-// import ProductsHeader from "../components/ProductsHeader";
+import { useState } from "react";
+import { nanoid } from "nanoid";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import OPTICALData from "../data/OPTICALData";
@@ -6,15 +8,12 @@ import SUNGLASSESData from "../data/SUNGLASSESData";
 import ProductsCard from "../components/ProductsCard";
 import ProductsCardThreeType from "../components/ProductsCardThreeType";
 import Pagination from "../components/Pagination";
-import { useState } from "react";
-// import Pagination from "../components/Pagination";
 
-// const checkDataPage = (data) => (data.length/12);
 
 const OPTICALs = OPTICALData.map(item=>{
   return(
     <ProductsCard
-    key={item.id}
+    key={nanoid()}
     {...item}
     />
     )
@@ -23,7 +22,7 @@ const OPTICALs = OPTICALData.map(item=>{
   const SUNGLASSESs = SUNGLASSESData.map(item=>{
     return(
       <ProductsCardThreeType
-      key={item.id}
+      key={nanoid()}
       {...item}
     />
   )
@@ -102,7 +101,8 @@ export default function Products() {
         {SUNGLASSESs}
         </ul>
 
-        <Pagination />
+      {!isClick.FUNCTIONAL && <Pagination /> }
+        
 
       </main>
 

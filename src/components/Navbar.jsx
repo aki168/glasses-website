@@ -3,20 +3,6 @@ import Icon from '@mdi/react'
 import { mdiMenu } from '@mdi/js';
 import { useState } from "react";
 
-// const clsx = (...str) => {
-//   str.join(" ");
-// }
-
-// const NavItem = ({children, className}) => {
-//   return(
-//   <li>
-//     <Link to="/products" 
-//         className={clsx("px-8 hover:text-red-200",className)}
-//         > {children}
-//     </Link>
-//   </li>
-//   )
-// }
 
 export default function Navbar() {
 
