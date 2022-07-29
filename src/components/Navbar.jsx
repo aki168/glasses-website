@@ -6,11 +6,11 @@ import { useState } from "react";
 
 export default function Navbar() {
 
- 
+
   const [menu, setMenu] = useState(false)
 
   const showMenu = () => {
-      setMenu(prevSetMenu => !prevSetMenu)
+    setMenu(prevSetMenu => !prevSetMenu)
   }
 
   const path = 'https://raw.githubusercontent.com/aki168/glasses-website/main/public';
@@ -18,9 +18,10 @@ export default function Navbar() {
   return (
     <section className="wrap bg-wine-300">
       <nav className="flex justify-between my-container">
-        <Link to="/glasses-website" >
+        <Link to={ menu || `/glasses-website`} onClick={ menu && showMenu  }
+          className={menu && "mx-auto"} >
           <h1 className="hidden">眼鏡形象官網</h1>
-          <img className="w-20" src={path+'/logo-white.png'} alt="LOGO" />
+          <img className="w-20" src={path + '/logo-white.png'} alt="LOGO" />
         </Link>
 
         {/* 平板 PC 選單 */}
@@ -40,21 +41,38 @@ export default function Navbar() {
         </ul>
 
         {/* 手機漢堡選單 */}
-        <button className="md:hidden">
-          <Icon
-            path={mdiMenu}
-            title="Menu"
-            size={2}
-            color="white"
-            onClick={showMenu}
-            // horizontal
-            // vertical
-            // rotate={90}
-            // spin
-          />
-        </button>
+        {menu ||
+          <button className="md:hidden">
+            <Icon
+              path={mdiMenu}
+              title="Menu"
+              size={2}
+              color="white"
+              onClick={showMenu}
+            />
+          </button>
+        }
 
       </nav>
+
+      {
+        menu &&
+        <ul className="text-white leading-7 flex flex-wrap md:hidden">
+          <li className="w-[50%] text-center border py-3">
+            <Link to="/products">系列鏡框</Link>
+          </li>
+          <li className="w-[50%] text-center border py-3">
+            <Link to="/stores" >門市據點</Link>
+          </li>
+          <li className="w-[50%] text-center border py-3">
+            <Link to="/blog">部落格</Link>
+          </li>
+          <li className="w-[50%] text-center border py-3">
+            <Link to="/FAQ">常見問題</Link>
+          </li>
+        </ul>
+      }
+
     </section>
 
   )
