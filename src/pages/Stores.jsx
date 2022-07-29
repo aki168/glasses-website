@@ -55,14 +55,14 @@ export default function Stores() {
         <ul className="flex flex-wrap gap-5">
           {storeCards}
       </ul>
-          <StoreWithMap
+          {/* <StoreWithMap
             id="1"
             img="store-1.png"
             title="台北中山旗艦店"
             tel="(02)000-1234"
             openTime="10:00-21:00"
             add="台北市中山區南京東路25巷2-1號"
-            />
+            /> */}
       </main>
       <Footer />
     </>
