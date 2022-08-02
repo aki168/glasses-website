@@ -20,9 +20,15 @@ export default function Stores() {
     />
   })
 
+  // const storeCardsWithMap = dataCon.map(item => {
+  //   return <StoreWithMap
+  //     key={nanoid()}
+  //     {...item}
+  //   />
+  // })
+
 
   const handleChange = event => {
-    // console.log('Label 👉️', event.target.selectedOptions[0].label);
     console.log(event.target.value);
     if (event.target.value !== 'all') {
       setDataCon(prevDataCon => data.filter(prevDataCon => prevDataCon.id === event.target.value))
@@ -59,17 +65,12 @@ export default function Stores() {
             <option value="5">高雄夢時代店</option>
           </select>
         </form>
+
+
         <ul className="flex flex-wrap gap-5">
           {storeCards}
         </ul>
-        {/* <StoreWithMap
-            id="1"
-            img="store-1.png"
-            title="台北中山旗艦店"
-            tel="(02)000-1234"
-            openTime="10:00-21:00"
-            add="台北市中山區南京東路25巷2-1號"
-            /> */}
+        
       </main>
       <Footer />
     </>

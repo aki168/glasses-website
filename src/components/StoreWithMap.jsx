@@ -5,7 +5,6 @@ export default function StoreWithMap(props) {
 
   const path = 'https://raw.githubusercontent.com/aki168/glasses-website/main/public';
 
-
   return (
     <ul className="md:flex">
       <li className="leading-normal w-[100%]
@@ -44,7 +43,12 @@ export default function StoreWithMap(props) {
             </ul>
           </div>
         </div>
-        <div className="bg-hairo-600 text-white w-[100%] lg:w-[48%] h-[208px] md:h-[414px] lg:h-[auto] mb-16 lg:mb-0">我是一張地圖</div>
+        <iframe
+          className="md:mb-4 w-[100%] h-[206px] md:h-[414px] lg:h-auto"
+          frameBorder="0"
+          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBZePdRreAm5l5QGnzThnJr-0FRMJ0eCO0&q=${props.add}`}
+          >
+        </iframe>
       </li>
     </ul>
   )
