@@ -5,14 +5,11 @@ export default function storeCard(props) {
 
   const path = 'https://raw.githubusercontent.com/aki168/glasses-website/main/public';
 
-  const checkShop = () => {
-    return(props.id)
-    
-  }
+  
 
   return (
     <li className="leading-normal w-[100%] mb-6 md:w-[47%] lg:mb-12 lg:w-[32%]
-                text-[20px]">
+                text-[20px] ">
       <img src={`${path}/${props.img}`} alt="store-pic" />
       <h4 className="text-[24px] border border-hairo-100 py-2 px-6">{props.title}</h4>
       <ul className="border border-hairo-100 py-4 px-6 md:px-7">
@@ -42,7 +39,8 @@ export default function storeCard(props) {
         </li>
       </ul>
       <button className="py-4 w-[100%] bg-black text-white text-[20px]"
-        onClick={checkShop}>
+        // onClick={checkShop}
+        >
         詳情資訊
       </button>
     </li>
