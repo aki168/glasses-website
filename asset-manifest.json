@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/glasses-website/static/css/main.cb185e52.css",
-    "main.js": "/glasses-website/static/js/main.7384b789.js",
+    "main.css": "/glasses-website/static/css/main.8c94979a.css",
+    "main.js": "/glasses-website/static/js/main.b0577b19.js",
     "static/media/index-bg-sm.png": "/glasses-website/static/media/index-bg-sm.50e8d36b4acd346a0a9b.png",
     "static/media/index-bg.png": "/glasses-website/static/media/index-bg.635ad2e5798b75671ed5.png",
     "static/media/index-bg-md.png": "/glasses-website/static/media/index-bg-md.243025c179c472e11ed0.png",
     "static/media/home-header.png": "/glasses-website/static/media/home-header.96ac8227d9121e903ae2.png",
     "static/media/home-header-sm.png": "/glasses-website/static/media/home-header-sm.a3e32da8225fe880109f.png",
     "index.html": "/glasses-website/index.html",
-    "main.cb185e52.css.map": "/glasses-website/static/css/main.cb185e52.css.map",
-    "main.7384b789.js.map": "/glasses-website/static/js/main.7384b789.js.map"
+    "main.8c94979a.css.map": "/glasses-website/static/css/main.8c94979a.css.map",
+    "main.b0577b19.js.map": "/glasses-website/static/js/main.b0577b19.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb185e52.css",
-    "static/js/main.7384b789.js"
+    "static/css/main.8c94979a.css",
+    "static/js/main.b0577b19.js"
   ]
 }
