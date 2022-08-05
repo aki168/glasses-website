@@ -1,4 +1,4 @@
-import {nanoid} from "nanoid";
+import { nanoid } from "nanoid";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -6,6 +6,7 @@ import IconCard from "../components/IconCard";
 import GlassesCard from "../components/GlassesCard";
 import DesignCard from "../components/DesignCard";
 import CustomerCard from "../components/CustomerCard";
+import Form from "../components/Form";
 
 // 引用資料
 import IconCardData from '../data/IconCardData';
@@ -44,12 +45,13 @@ export default function Homepage() {
   return (
     <>
       <Navbar />
-      <header className="bg-hero-sm md:bg-hero py-[300px] bg-cover bg-center
+      <header className="bg-hero-sm md:bg-hero py-[145px] md:py-[300px] 
+                        bg-cover bg-center
                       text-wine-600 leading-normal text-end">
         <section className="my-container">
-          <h3 className="text-[36px]">Promise-Desert 2020 早春系列</h3>
-          <h2 className="text-[64px] font-bold">看得清，才能看得遠</h2>
-          <button className="bg-wine-300 text-white text-[20px] py-[6px] px-2 font-medium">立即購買</button>
+          <h3 className="md:text-[36px] ">Promise-Desert 2020 早春系列</h3>
+          <h2 className="md:text-[64px] text-[24px] font-bold mb-2">看得清，才能看得遠</h2>
+          <button className="bg-wine-300 text-white text-[20px] py-[6px] md:px-2 px-3 font-medium">立即購買</button>
         </section>
       </header>
 
@@ -97,7 +99,7 @@ export default function Homepage() {
         </ul>
       </section>
 
-      {/* 聯絡我們：待製作 */}
+      <Form/>
 
       <Footer />
 

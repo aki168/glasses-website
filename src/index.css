@@ -3,7 +3,22 @@
 @tailwind utilities;
 
 
+@layer base {
+  /*擴充專案的全站樣式*/
+  body {
+    margin: 0;
+    font-family:'Roboto','Noto Sans TC',system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  a:hover, svg:hover, button:hover{
+    opacity: 0.9;
+  }
+}
+
 @layer components {
+  /*自組元件*/
   .my-container {
     @apply xl:container xl:mx-auto p-4;
   }
@@ -19,13 +34,6 @@
   
 }
 
-body {
-  margin: 0;
-  font-family: 'Noto Sans TC','Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a:hover, svg:hover, button:hover{
-  opacity: 0.9;
+@layer utilities{
+  /*自組樣式*/
 }

@@ -39,7 +39,9 @@ module.exports = {
       }
 
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 
 // 通用的斷點數值

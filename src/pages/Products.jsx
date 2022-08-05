@@ -34,8 +34,8 @@ export default function Products() {
 
   const [isClick, setIsClick] = useState({
     OPTICAL: true,
-    SUNGLASSES: false,
-    FUNCTIONAL: false
+    // SUNGLASSES: false,
+    // FUNCTIONAL: false
   });
 
 
@@ -43,6 +43,7 @@ export default function Products() {
     e.preventDefault();
     const { name, value } = e.target;
     setIsClick(prevIsClick => ({
+      ...!isClick,
       [name]: !value
     }))
   }

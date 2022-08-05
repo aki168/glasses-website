@@ -10,7 +10,8 @@ export default function Footer() {
       <section className="flex md:block justify-between">
         <nav className="justify-between my-container mb-9
                         hidden md:flex">
-          <ul className="items-center text-white leading-normal flex">
+          <ul className="items-center text-white leading-normal flex
+                        ">
             <li>
               <Link to="/glasses-website" className="pr-6 mb-12">首頁</Link>
             </li>
@@ -28,14 +29,14 @@ export default function Footer() {
             </li>
           </ul>
           <ul className="flex">
-            <li><a href="/"><img className="w-6 md:w-11" src={`${path}/ic_social_ig.png`}  alt="IG" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 hover:scale-125 transition-all" src={`${path}/ic_social_ig.png`}  alt="IG" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 ml-8 hover:scale-125 transition-all" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
+            <li><a href="/"><img className="w-6 md:w-11 ml-8 hover:scale-125 transition-all" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
           </ul>
         </nav>
 
 
-        <ul className="contact pb-6 md:pb-8 my-container">
+        <ul className="contact pb-6 md:pb-8 my-container p-0 py-4">
           <li className="align-middle mb-2">
               <Icon
                 className="md:w-9 w-5 md:mr-5 mr-3 inline-block"
