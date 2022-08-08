@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import SubNav from "./SubNav";
 import { useLocation } from "react-router-dom";
 import Icon from '@mdi/react'
-import { mdiLabelOutline } from '@mdi/js';
+import { mdiLabelOutline, mdiInstagram, mdiFacebook, mdiArrowRightThick, mdiArrowLeftThick } from '@mdi/js';
 
 export default function Articles(){
   const path = 'https://raw.githubusercontent.com/aki168/glasses-website/main/public';
@@ -33,7 +33,7 @@ export default function Articles(){
     <>
     <Navbar/>
     <SubNav/>
-    <section className="my-container py-4 leading-normal md:flex">
+    <section className="my-container py-4 leading-normal md:flex mb-6">
       <main className="w-[100%] md:w-2/3 py-6">
       <h4>首頁 / 部落格 / 特別企劃 / 
         <span className="text-wine-300"> {whichArticle.title}</span>
@@ -51,6 +51,17 @@ export default function Articles(){
         {allTags}
       </div>
     </section>
+    <div className="my-container hidden md:block">
+      <div className="pb-4 border-b border-b-hairo-600">
+        <span className="font-bold mx-2">Share</span>
+        <Icon className="w-[25px] inline-block mx-2" path={ mdiFacebook } /> 
+        <Icon className="w-[25px] inline-block mx-2" path={ mdiInstagram } /> 
+      </div>
+      <ul className="py-4 flex justify-between">
+        <li><Icon className="w-[25px] inline-block mx-2" path={ mdiArrowLeftThick } /> 上一篇：街頭潮人訪問 1</li>
+        <li>下一篇：街頭潮人訪問 2<Icon className="w-[25px] inline-block mx-2" path={ mdiArrowRightThick } /> </li>
+      </ul>
+    </div>
     <Footer/>
     </>
   )
