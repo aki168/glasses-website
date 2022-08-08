@@ -3,7 +3,8 @@ import React from 'react'
 const Form = () => {
   return (
     <section className="py-10 px-4 leading-normal bg-wine-100">
-      <div className="my-container mx-auto md:px-20 lg:w-1/2">
+      <form className="my-container mx-auto md:px-20 lg:w-[53%]"
+            onSubmit={()=>alert('成功提交')}>
         <h2 className="my-title mb-12">聯絡我們</h2>
         <p>
           我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
@@ -65,12 +66,15 @@ const Form = () => {
                   text-gray-700
                   focus:ring-1 focus:ring-offset-2 focus:ring-gray-500
                 " />
-                <span class="ml-2">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</span>
+                <span className="ml-2">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</span>
               </label>
             </div>
           </div>
         </div>
-      </div>
+        <input type="submit" value="確認送出" 
+                className="block mx-auto bg-wine-300 text-white py-4 w-[100%] md:w-[60%] lg:w-[50%] font-bold
+                hover:bg-gray-500" />
+      </form>
     </section>
   )
 }

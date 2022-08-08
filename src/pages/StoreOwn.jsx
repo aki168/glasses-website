@@ -4,31 +4,23 @@ import Title from "../components/Title"
 import StoreWithMap from "../components/StoreWithMap"
 import data from "../data/StoresCardData"
 import { nanoid } from "nanoid"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useLocation } from "react-router-dom"
 
 export default function StoreOwn() {
   
-
-  // const storeCards = data.map(item => {
-  //   return <StoreWithMap
-  //     key={nanoid()}
-  //     show={true}
-  //     {...item}
-  //   />
-  // })
-
-  // const [selected, setSelected] = useState('');
-
-  // const handleChange = event => {
-  //   console.log('Label 👉️', event.target.selectedOptions[0].label);
-  //   console.log(event.target.value);
-
-  //   setSelected(event.target.value);
-  // };
+  const { state: { selectedWhat } = {} } = useLocation();//把前一頁點擊的id值記錄下來
 
   const [dataCon, setDataCon] = useState(data);
-  console.log(dataCon)
+  const [selected, setSelected] = useState(selectedWhat);
 
+  useEffect(()=>{
+    if (selectedWhat !== 'all'){
+      const selectedData = data.filter(prev => prev.id === selected);
+      setDataCon(prev => selectedData)}
+  },[selected])
+
+  console.log(selected)
 
   const storeCards = dataCon.map(item => {
     return <StoreWithMap
@@ -40,12 +32,13 @@ export default function StoreOwn() {
 
   const handleChange = event => {
     console.log(event.target.value);
+    setSelected(event.target.value);
     if (event.target.value !== 'all') {
       setDataCon(prevDataCon => data.filter(prevDataCon => prevDataCon.id === event.target.value))
     } else {
       setDataCon(data)
     }
-    console.log(dataCon);
+    console.log('前一動作的目前資料:',dataCon);
   };
 
 
@@ -57,10 +50,10 @@ export default function StoreOwn() {
         <form className="w-[100%] mb-6 lg:mb-12 lg:w-[32%] mb-6 flex items-center">
           <label htmlFor="store-select" className="text-[16px] md:text-[24px]  lg:text-[20px] mb-10 mr-1 md:mr-2">選擇分店</label>
           <select name="store-select" 
-          // value={selected} 
+          value={selected} 
           onChange={handleChange}
             className="mb-10 w-[80%] md:w-[75%] border border-hairo-400 py-2 md:py-1 px-3 text-[18px]">
-            <option value="all">顯示全部</option>
+            {/* <option value="all">顯示全部</option> */}
             <option disabled={true} value="">
               台北市
             </option>

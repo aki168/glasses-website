@@ -5,35 +5,24 @@ import data from "../data/StoresCardData";
 import StoreCard from "../components/StoreCard";
 import Title from "../components/Title";
 import Footer from "../components/Footer";
-import StoreWithMap from "../components/StoreWithMap";
+// import StoreWithMap from "../components/StoreWithMap";
+// import StoreOwn from "./StoreOwn"
 
 export default function Stores() {
 
   const [dataCon, setDataCon] = useState(data);
   const [selected, setSelected] = useState('tp');
-
-    // 寫給子層的函式，子層回傳按鈕的name，則設定選單value，進行渲染資料過濾
-    // const showCard = (BtnName) => {
-    //   setSelected(BtnName);
-    //   console.log('按到',BtnName)
-    //   // setDataCon(prevDataCon => data.filter(prevDataCon => prevDataCon.id === selected))
-    // }
   
   const storeCards = dataCon.map(item => {
     return <StoreCard
       key={nanoid()}
       onItemClick={setSelected}
+      // dataCon={dataCon}
+      selected={selected}
       {...item}
     />
   })
 
-  const storeCardsWithMap = dataCon.map(item => {
-    return <StoreWithMap
-      key={nanoid()}
-      // click={(e)=> handleClick(e)}
-      {...item}
-    />
-  })
 
   const handleChange = (event) => {
     console.log(event.target.value);
@@ -41,27 +30,13 @@ export default function Stores() {
     setSelected(event.target.value);
     // 判斷選單value非all時，篩選原資料
     // 是all時就不再篩選
-    event.target.value !== 'all' ?
-      setDataCon(prevDataCon => data.filter(prevDataCon => prevDataCon.id === event.target.value))
-      : setDataCon(data);
-    
+
+    event.target.value !== 'all' ? 
+    setDataCon(prevDataCon => data.filter(prevDataCon => prevDataCon.id === event.target.value))
+    : setDataCon(data) ;
+
     console.log(dataCon);
   };
-
-  const handleClick = (e) => {
-    // console.log(event.target.id);
-    // // 設定選單選取value
-    // setSelected(event.target.id);
-    // // 判斷選單value非all時，篩選原資料
-    // // 是all時就不再篩選
-    // event.target.id !== 'all' ?
-    //   setDataCon(prevDataCon => data.filter(prevDataCon => prevDataCon.id === event.target.id))
-    //   : setDataCon(data);
-    
-    console.log(e);
-  };
-
-
 
 
   return (
@@ -90,14 +65,11 @@ export default function Stores() {
           </select>
         </form>
 
-          {/* 無地圖模式 */}
-        {/* {mode && */}
         <ul className="flex flex-wrap gap-5">
           {storeCards}
         </ul>
-        {/* } */}
-          {/* {storeCardsWithMap} */}
-        
+
+
       </main>
       <Footer />
     </>
