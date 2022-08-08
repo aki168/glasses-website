@@ -28,10 +28,10 @@ export default function Footer() {
               <Link to="/FAQ" className="pl-6">常見問題</Link>
             </li>
           </ul>
-          <ul className="flex">
-            <li><a href="/"><img className="w-6 md:w-11 hover:scale-125 transition-all" src={`${path}/ic_social_ig.png`}  alt="IG" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8 hover:scale-125 transition-all" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
-            <li><a href="/"><img className="w-6 md:w-11 ml-8 hover:scale-125 transition-all" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
+          <ul className="flex" onClick={(e)=>{e.preventDefault()}}>
+            <li><a href="!#"><img className="w-6 md:w-11 hover:scale-125 transition-all" src={`${path}/ic_social_ig.png`}  alt="IG" /></a></li>
+            <li><a href="!#"><img className="w-6 md:w-11 ml-8 hover:scale-125 transition-all" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
+            <li><a href="!#"><img className="w-6 md:w-11 ml-8 hover:scale-125 transition-all" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
           </ul>
         </nav>
 
@@ -61,10 +61,22 @@ export default function Footer() {
           </li>
         </ul>
 
-        <ul className="flex md:hidden">
-            <li><a href="/"><img className="w-11" src={`${path}/ic_social_ig.png`} alt="IG" /></a></li>
-            <li><a href="/"><img className="w-11 ml-1" src={`${path}/ic-social-fb.png`} alt="FB" /></a></li>
-            <li><a href="/"><img className="w-11 ml-1" src={`${path}/ic_social_line.png`} alt="LINE" /></a></li>
+        <ul className="flex md:hidden" onClick={(e)=>{e.preventDefault()}}>
+            <li>
+              <a href="!#">
+                <img className="w-11" src={`${path}/ic_social_ig.png`} alt="IG" />
+              </a>
+            </li>
+            <li>
+              <a href="!#">
+                <img className="w-11 ml-1" src={`${path}/ic-social-fb.png`} alt="FB" />
+              </a>
+            </li>
+            <li>
+              <a href="!#">
+                <img className="w-11 ml-1" src={`${path}/ic_social_line.png`} alt="LINE" />
+              </a>
+            </li>
         </ul>
       </section>
 
